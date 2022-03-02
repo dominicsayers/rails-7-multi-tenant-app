@@ -37,5 +37,9 @@ module Rails7MultiTenantApp
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.application_name = module_parent_name
+    config.application_slug = config.application_name.underscore
+    config.application_title = config.application_slug.humanize
   end
 end
